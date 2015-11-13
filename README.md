@@ -4,7 +4,7 @@
 
 ### Windows
 0. Install Python 3.5.0 from [here](https://www.python.org/downloads/)
-0. `pip install virtual env`
+0. `pip install virtualenv`
 0. `virtualenv nikola`
 0. `cd nikola`
 0. `git clone https://github.com/Team488/team488.github.io.git`
