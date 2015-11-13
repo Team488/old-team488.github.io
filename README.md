@@ -2,8 +2,21 @@
 
 ## How to build this website
 
-### Mac
+### Windows
+0. Install Python 3.5.0 from [here](https://www.python.org/downloads/)
+0. `pip install virtual env`
+0. `virtualenv nikola`
+0. `cd nikola`
+0. `git clone https://github.com/Team488/team488.github.io.git`
+0. `.\Scripts\activate`
+0. `pip install .\team488.github.io\binaries\lxml-3.4.4-cp35-none-win32.whl`
+0. `pip install .\team488.github.io\binaries\Pillow-3.0.0-cp35-none-win32.whl`
+0. `pip install --upgrade "Nikola[extras]"`
+0. `cd .\team488.github.io\`
+0. `nikola build`
+0. `nikola serve --browser`
 
+### Mac
 ````
 # Install python and virtualenv
 brew install python3
