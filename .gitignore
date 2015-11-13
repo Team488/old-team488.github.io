@@ -8,3 +8,4 @@ output
 .doit.db.dat
 .doit.db.dir
 .venv
+*.sublime-workspace
