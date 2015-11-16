@@ -25,7 +25,7 @@ SITE_URL = "https://team488.github.io/"
 # This is the URL where Nikola's output will be deployed.
 # If not set, defaults to SITE_URL
 # BASE_URL = "https://team488.github.io/"
-BLOG_EMAIL = "info@teamxbot.org"
+BLOG_EMAIL = "xbot-prog@google.groups.com"
 BLOG_DESCRIPTION = "Team488"  # (translatable)
 
 # Nikola is multilingual!
@@ -128,9 +128,25 @@ TRANSLATIONS_PATTERN = "{path}.{lang}.{ext}"
 
 NAVIGATION_LINKS = {
     DEFAULT_LANG: (
-        ("/archive.html", "Archive"),
-        ("/categories/", "Tags"),
-        ("/rss.xml", "RSS feed"),
+        
+        (
+            (
+                ("/blog", "Latest"),
+                ("/categories", "Categories"),
+                ("/archive.html", "Archive"),
+            ),
+            'Blog'
+        ),
+        (
+            (
+                ("/galleries/FRC_Robots", "FRC Robots"),
+                ("/galleries/FTC_Robots", "FTC Robots")
+            ),
+            'Gallery'
+        ),
+        ("/awards", "Awards"),
+        ("/sponsors", "Sponsors"),
+        ("http://wiki.team488.org", "Team Wiki")
     ),
 }
 
@@ -618,15 +634,15 @@ REDIRECTIONS = []
 # "source/" and the results will be located in
 # "OUTPUT_PATH/relative_destination/gallery_name"
 # Default is:
-# GALLERY_FOLDERS = {"galleries": "galleries"}
+GALLERY_FOLDERS = {"galleries": "galleries"}
 # More gallery options:
-# THUMBNAIL_SIZE = 180
+THUMBNAIL_SIZE = 180
 # MAX_IMAGE_SIZE = 1280
 # USE_FILENAME_AS_TITLE = True
 # EXTRA_IMAGE_EXTENSIONS = []
 #
 # If set to False, it will sort by filename instead. Defaults to True
-# GALLERY_SORT_BY_DATE = True
+GALLERY_SORT_BY_DATE = True
 #
 # Folders containing images to be used in normal posts or pages. Images will be
 # scaled down according to IMAGE_THUMBNAIL_SIZE and MAX_IMAGE_SIZE options, but
