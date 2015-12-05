@@ -1,0 +1,4 @@
+Sitemap: https://team488.github.io/sitemapindex.xml
+
+User-Agent: *
+Host: team488.github.io
