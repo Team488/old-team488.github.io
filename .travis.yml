@@ -9,15 +9,10 @@ branches:
   - master
 deploy:
   skip_cleanup: true
-after_success:
-  - cd output
-  - FULL_REPO="https://$GH_TOKEN@github.com/Team488/team488.github.io.git"
-  - git init
-  - git config user.name "Travis-CI"
-  - git config user.email "travis@teamxbot.org"
-  - git add -A
-  - git commit -m "Deploy to GitHub Pages"
-  - git push --force --quiet $FULL_REPO master
+  provider: script
+  script: sh deploy.sh
+  on:
+    branch: dev
 env:
   global:
     secure: qEpcrEDPh/qNa3ISY/nvwaMiQxGUbOn5Q7zA63bbuv8O70K+NKHMmQr87Z0fdFF6Pudn9Y29gou5iJSJ3cIZsjPeq8ss9FpPL9fhidQUDUXUc/S9LG3yQd9AwQ+6z8R9NB5zOwUbt8i3ELYDaWFSoosI6M/WYLJ/PWWg2bFxG6Q7VMU3i+5GX4pFQmQonEev1t2vFSLaBzddeEUivX5asoksi58fZqhi0XVHLoUSQbeW4a7zLjZNR9UPZC7vQMgTv0LbfRT5ln7YepMOV6AaZPjpVGnppfj4VuOxChbtrqE+o48yLOf5iAsuSkyjzBObqfqEgdjlEOG5mfprROjB16FHQMRE+kjtbxetPtnrZfCHSCURqiLhIi8zuFGFyuoli3M3bAyk6Qa032JVHnqixW2RAmvV0aK88VHRtBEt+F7mdP6qjHEK7SvDtu+UH2nEdbWpMSDFbSSwXz15Q5e2ShtybMS01hTeTSfRjXJ1jAbdkHuIShOQDf6kEKzGsbizu2qmV9eBEYhxd6QUGMN3R3hcjzi2toHGlWV/yCAe67BFCQ3soX9vM/I9UCnSsYFEm4tWHMjpb5lgEmo+xbc/+3z6xfWz+/ml7PO8niQV7OxZiCb9dDeDC0mbjUKypEV0DfaNlHIDzua9YSIZaigQIhU1lM1kUEZ9/sBYnB7l168=
