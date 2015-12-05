@@ -11,7 +11,7 @@
 0. `.\Scripts\activate`
 0. `pip install .\team488.github.io\binaries\lxml-3.4.4-cp35-none-win32.whl`
 0. `pip install .\team488.github.io\binaries\Pillow-3.0.0-cp35-none-win32.whl`
-0. `pip install --upgrade "Nikola[extras]"`
+0. `pip install "Nikola[extras]"`
 0. `cd .\team488.github.io\`
 0. `nikola build`
 0. `nikola serve --browser`
